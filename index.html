@@ -22,6 +22,16 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .results {
+            text-align: left;
+            background: black;
+            color: lime;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            margin-bottom: 10px;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
         .container input[type="text"] {
             width: calc(100% - 48px);
             padding: 10px;
@@ -46,10 +56,6 @@
         }
         .container button:hover {
             background-color: #0056b3;
-        }
-        .error {
-            color: red;
-            margin-top: 10px;
         }
         .title {
             font-weight: bold;
@@ -78,9 +84,9 @@
             </svg>
         </a>
         <h1 class="title">PREMIUM TOOL</h1>
+        <div id="results" class="results"></div>
         <input type="text" id="codeInput" placeholder="Enter code">
         <button onclick="checkCode()">Go</button>
-        <div id="errorMessage" class="error"></div>
     </div>
 
     <script>
@@ -94,21 +100,21 @@
 
         async function checkCode() {
             const input = document.getElementById("codeInput").value.trim().toLowerCase();
-            const errorMessage = document.getElementById("errorMessage");
-            errorMessage.textContent = ''; // Clear previous error message
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.textContent = ''; // Clear previous results
 
             try {
                 const data = await fetchTextFile('list.txt');
                 const lines = data.split('\n');
-                const foundLine = lines.find(line => line.toLowerCase().includes(input));
+                const matchedLines = lines.filter(line => line.toLowerCase().includes(input));
 
-                if (foundLine) {
-                    errorMessage.textContent = foundLine;
+                if (matchedLines.length > 0) {
+                    resultsDiv.textContent = matchedLines.join('\n');
                 } else {
-                    errorMessage.textContent = 'Sorry 😐 wrong code word';
+                    resultsDiv.textContent = 'Sorry 😐 wrong code word';
                 }
             } catch (error) {
-                errorMessage.textContent = 'Error loading text file';
+                resultsDiv.textContent = 'Error loading text file';
                 console.error('Error:', error);
             }
         }
