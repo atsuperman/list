@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PREMIUM TOOL</title>
+    <title>LIST</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,12 +12,12 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: skyblue;
+            background-color: #f3f3f3; /* Light gray background */
         }
         .container {
             position: relative;
             text-align: center;
-            background: url('wood-texture.jpg') no-repeat center center/cover; /* Assuming wood-texture.jpg is in the same directory */
+            background: linear-gradient(45deg, #8b4513 25%, #deb887 25%, #deb887 50%, #8b4513 50%, #8b4513 75%, #deb887 75%, #deb887 100%); /* Wood-like gradient background */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -83,7 +83,7 @@
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
         </a>
-        <h1 class="title">PREMIUM TOOL</h1>
+        <h1 class="title">LIST CHECK</h1>
         <div id="results" class="results"></div>
         <input type="text" id="codeInput" placeholder="Enter code">
         <button onclick="checkCode()">Go</button>
