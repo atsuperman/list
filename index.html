@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREMIUM TOOL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: skyblue;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container input[type="text"] {
+            width: calc(100% - 48px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            float: left;
+        }
+        .container .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 2em;
+            background: linear-gradient(45deg, #b8c6db, #f5f7fa, #b8c6db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% {
+                background-position: -500px 0;
+            }
+            100% {
+                background-position: 500px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://brazen-achieved-seeder.glitch.me/" class="home-button" aria-label="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+        <h1 class="title">PREMIUM TOOL</h1>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="checkCode()">Go</button>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <script>
+        async function fetchTextFile(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return await response.text();
+        }
+
+        async function checkCode() {
+            const input = document.getElementById("codeInput").value.trim().toLowerCase();
+            const errorMessage = document.getElementById("errorMessage");
+            errorMessage.textContent = ''; // Clear previous error message
+
+            try {
+                const data = await fetchTextFile('list.txt');
+                const lines = data.split('\n');
+                const foundLine = lines.find(line => line.toLowerCase().includes(input));
+
+                if (foundLine) {
+                    errorMessage.textContent = foundLine;
+                } else {
+                    errorMessage.textContent = 'Sorry 😐 wrong code word';
+                }
+            } catch (error) {
+                errorMessage.textContent = 'Error loading text file';
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+  </html>
