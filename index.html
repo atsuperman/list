@@ -12,38 +12,28 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: skyblue;
+            background-color: skyblue; /* Page background color sky blue */
         }
         .container {
             position: relative;
             text-align: center;
-            background: #fff;
+            background: linear-gradient(45deg, #32CD32, #228B22, #006400); /* Tree leaf background style */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .results {
-            text-align: left;
-            background: black;
-            color: lime;
-            padding: 10px;
-            border-radius: 4px;
-            font-family: "Courier New", Courier, monospace;
-            margin-bottom: 10px;
-            white-space: pre-wrap; /* Preserve whitespace and line breaks */
-        }
         .container input[type="text"] {
-            width: calc(100% - 48px);
+            width: calc(100% - 48px); /* Adjusted width to accommodate the home button */
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            float: left;
+            float: left; /* Float the text box to allow space for the home button */
         }
         .container .home-button {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 0;
             cursor: pointer;
         }
         .container button {
@@ -56,6 +46,10 @@
         }
         .container button:hover {
             background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
         }
         .title {
             font-weight: bold;
@@ -111,7 +105,7 @@
                 if (matchedLines.length > 0) {
                     resultsDiv.textContent = matchedLines.join('\n');
                 } else {
-                    resultsDiv.textContent = 'Sorry 😐 wrong code word';
+                    resultsDiv.textContent = '⚠️Sorry ';
                 }
             } catch (error) {
                 resultsDiv.textContent = 'Error loading text file';
@@ -121,3 +115,4 @@
     </script>
 </body>
 </html>
+
