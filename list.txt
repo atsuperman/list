@@ -15,15 +15,15 @@ Ennachu eathachu
 Pooja va priyamudan 
 Thuppuran Dbox
 Stylish tamilachi Dbox 
-Puthu kadhal, puthukottai Saravanan 
-Malargale malar vendam
-Yetho mayakkam Billa 2
-Irandum Ondrodu ondru
-Aandipatti kanava kaathu 
-Nenjil mamazhai Dbox 
-Theeratha vilayattu dbox
-Makkayala Dbox 
-Super tv intro
+Puthu kadhal, puthukottai Saravanan📺 
+Malargale malar vendam📺
+Yetho mayakkam Billa 2📺
+Irandum Ondrodu ondru📺
+Aandipatti kanava kaathu📺 
+Nenjil mamazhai Dbox 📺
+Theeratha vilayattu dbox📺
+Makkayala Dbox 📺
+Super tv intro📺
 athiradi karan 📺
 Machan machan 📺
 koodamela kooda 📺
@@ -31,6 +31,8 @@ kodi arvi kottuthe 📺
 April mathathil 📺
 Pani vizhum iravu 📺
 vada binleda mangatha 📺
+vilayadu mangatha 📺
+
 total 32 playlist.json
 
 
@@ -70,6 +72,7 @@ total 32 playlist.json
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/April%20mathathil.mov?v=1716976197817",
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/Pani%20vizhum%20iravu%20.mov?v=1717028724823",
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/Vada%20binleda.mov?v=1717028779531",
+"https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/vilayadu%20mangatha.mov?v=1717028825807",
 
 
 
