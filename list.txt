@@ -33,8 +33,10 @@ Pani vizhum iravu 📺
 vada binleda mangatha 📺
 vilayadu mangatha 📺
 masi masam aalana 📺
+pulpesum poo pesum 📺
 
-total 35 playlist.json
+
+total 36 playlist.json
 
 
 
@@ -75,6 +77,7 @@ total 35 playlist.json
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/Vada%20binleda.mov?v=1717028779531",
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/vilayadu%20mangatha.mov?v=1717028825807",
 "https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/Masi%20masam%20aalana.mov?v=1717210706223",
+"https://cdn.glitch.me/6ad6d1d5-5f34-4961-b060-2efc2158c856/pulpesum%20poo%20pesum.mov?v=1717230978200",
 
 
 
